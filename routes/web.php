@@ -19,3 +19,15 @@ use App\Http\Controllers\UserController;
 Route::get('/',[UserController::class, 'utama'] );
 
 Route::get('/biodata', [HomeController::class, 'bio']);
+
+Route::post('/kirim', [HomeController::class, 'kirim']);
+
+Route::get('/table', function () {
+    return view('halaman.table');
+});
+Route::get('/data-table', function () {
+    return view('halaman.data-Table');
+});
+
+
+

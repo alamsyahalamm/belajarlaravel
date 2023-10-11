@@ -15,4 +15,12 @@ class HomeController extends Controller
     {
         return view('halaman.biodata');
     }
+
+    public function kirim(Request $request)
+    {
+        $nama = $request['name'];
+        $alamat = $request['alamat'];
+
+        return view('halaman.home', ['nama' => $nama, 'alamat' => $alamat]);
+    }
 }
